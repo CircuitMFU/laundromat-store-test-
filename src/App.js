@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/header'
+import Machine from './components/Machine';
+import React from 'react';
+import matchines from './data/machines';
 
 function App() {
+  const matchineElements = matchines.map((matchine, index) => {
+    return <Machine  key ={index} id={matchine.id} name={matchine.name} img={matchine.img} status={matchine.status} time_left={matchine.time_left}/>
+  })
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className='machines' >
+        {matchineElements}
+      </div>
     </div>
   );
 }
