@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './components/header'
-import Machine from './components/Machine';
+import Machine from './components/machine';
 import React from 'react';
 import matchines from './data/machines';
 

@@ -46,7 +46,8 @@ function Machine(props) {
     const color = status === 0 ? 'red' : status === 1 ? '#11eb68' : time === 0 ? '#11eb68' : 'orange'
     const useMachine = () => {
         setUsed(true);
-        setTime(600)
+        // simulate time for washing
+        setTime(600) ; 
         setStatus(2)
     }
 
